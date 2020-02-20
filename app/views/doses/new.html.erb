@@ -1,0 +1,9 @@
+<h1>Add new Dose</h1>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <!-- link to ingredient instance on the create page using find -->
+  <!-- Make a drop down menue of options -->
+  <%= f.association :ingredient %>
+  <%= f.input :description %>
+  <%= f.button :submit %>
+<% end %>
