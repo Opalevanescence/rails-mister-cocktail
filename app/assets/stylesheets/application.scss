@@ -11,3 +11,35 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  background: linear-gradient(rgb(16, 50, 79), rgb(1, 16, 28));
+  padding-left: 160px;
+  padding-right: 160px;
+}
+
+h1 {
+  font-family: 'Lobster';
+  font-size: 36px;
+  color: white;
+}
+
+h2 {
+  font-family: 'Lobster';
+  font-size: 30px;
+  color: black;
+}
+
+li {
+  font-family: 'Cabin';
+  font-size: 13px;
+  color: white;
+}
+
+a {
+  color: white;
+
+  &:hover {
+    color: gray;
+  }
+}

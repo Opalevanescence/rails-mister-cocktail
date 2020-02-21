@@ -1,17 +1,31 @@
 <h1>Cocktails</h1>
-<ul>
+<ul class="list-unstyled">
+<div class="container">
+  <div class="row">
   <% @cocktails.each do |cocktail| %>
-    <ul>
-      <li><%= cocktail.name %></li>
+  <!-- insert image here -->
+    <div class="col-3 position-relative">
+    <ul class="opaque_card list-unstyled px-4 py-2 my-2">
+      <li class="c_name text-center"><%= cocktail.name %></li>
+      <br>
       <% cocktail.doses.each do |dose| %>
-        <div>
-          <li><%= dose.description %></li>
-          <li><%= dose.ingredient.name %></li>
-          <li><%= link_to 'Delete', dose_path(dose), method: :delete, data: {confirm: "Are you sure?"} %></li>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex">
+            <li><%= dose.description %></li>
+            <li class="mx-2"><%= dose.ingredient.name %></li>
+          </div>
+          <!-- Font Awesome Trashcan Icon-->
+          <li class="mb">
+            <%= link_to dose_path(dose), method: :delete, data: {confirm: "Are you sure?"} do %>
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            <% end %>
+          </li>
         </div>
       <% end %>
-      <li><%= link_to 'Add new dose', new_cocktail_dose_path(cocktail) %></li>
-      <br>
+      <li class="button-bottom btn btn-primary rounded-pill"><%= link_to 'Add new dose', new_cocktail_dose_path(cocktail) %></li>
     </ul>
+    </div>
   <% end %>
+  </div>
+</div>
 </ul>

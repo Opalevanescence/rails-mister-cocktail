@@ -1,2 +1,21 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.c_name {
+  font-family: 'Lobster Two';
+  font-size: 18px;
+  color: white;
+}
+
+.opaque_card {
+  width: 240px;
+  height: 300px;
+  background-color: rgba(27, 27, 27, 0.6);
+  border-radius: 40px;
+}
+
+.button-bottom {
+  position: absolute;
+  bottom: 10px;
+  left: 27%;
+}
