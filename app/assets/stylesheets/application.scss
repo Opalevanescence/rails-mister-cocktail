@@ -37,9 +37,11 @@ li {
 }
 
 a {
+  font-family: 'Cabin';
+  font-size: 13px;
   color: white;
 
   &:hover {
-    color: gray;
+    color: rgb(128, 181, 221);
   }
 }

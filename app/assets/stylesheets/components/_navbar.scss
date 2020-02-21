@@ -10,3 +10,18 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-title {
+  font-family: 'Lobster';
+  font-size: 36px;
+  color: white;
+}
+
+.navbar-btn {
+  background-color: #071725;
+  color: rgb(188, 209, 226);
+  &:hover {
+    color: rgb(128, 181, 221);
+  }
+}
+
