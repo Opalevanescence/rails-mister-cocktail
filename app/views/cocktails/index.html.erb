@@ -1,4 +1,4 @@
-<h1>Cocktails</h1>
+
 <ul class="list-unstyled">
 <div class="container">
   <div class="row">
@@ -22,10 +22,38 @@
           </li>
         </div>
       <% end %>
-      <li class="button-bottom btn btn-primary rounded-pill"><%= link_to 'Add new dose', new_cocktail_dose_path(cocktail) %></li>
+      <!-- <li class="button-bottom btn btn-primary rounded-pill"><%= link_to 'Add new dose', new_cocktail_dose_path(cocktail) %></li> -->
+      <button type="button" class="button-bottom btn btn-primary rounded-pill" data-toggle="modal" data-target="#doseModal">
+        Add new dose
+      </button>
+
+      <!-- MODAL FOR NEW DOSES -->
+      <div class="modal fade" id="doseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add new Dose</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h1>create new dose</h1>
+                <%= simple_form_for [cocktail, @dose] do |f| %>
+                <%= f.association :ingredient %>
+                <%= f.input :description %>
+                <%= f.button :submit %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </ul>
     </div>
   <% end %>
   </div>
 </div>
 </ul>
+
+
